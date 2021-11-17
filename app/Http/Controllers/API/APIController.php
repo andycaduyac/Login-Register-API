@@ -8,6 +8,9 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use App\Models\Logs;
+use App\Models\Posts;
+use App\Models\User;
 use Flash;
 use Response;
 
@@ -33,7 +36,7 @@ class APIController extends Controller
             $logs->log="Login";
             $logs->logdetails="User $user->username has logged in";
             $logs->logtype="API Login";
-            $log->save();
+            $logs->save();
 
             return response()->json($success, $this->successStatus);
     
@@ -78,6 +81,7 @@ class APIController extends Controller
         }
         
     }
+
     
 
 }

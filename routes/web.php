@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,3 +29,6 @@ Route::resource('appointments', App\Http\Controllers\AppointmentController::clas
 
 
 Route::resource('logs', App\Http\Controllers\LogsController::class);
+
+
+Route::resource('posts', App\Http\Controllers\PostsController::class);
